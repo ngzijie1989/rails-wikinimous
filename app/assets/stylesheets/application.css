@@ -25,3 +25,11 @@
 .textarea{
   width: 500px;
 }
+
+.single p{
+  font-size: 25px !important;
+}
+
+.card{
+  margin: 20px;
+}

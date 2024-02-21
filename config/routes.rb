@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get "articles/new", to: "articles#new", as: "new_article"
   post "articles", to: "articles#create"
   get "articles/:id", to: "articles#show", as: "article"
+  delete "articles/:id", to: "articles#destroy", as: "delete"
 end

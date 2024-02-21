@@ -5,7 +5,12 @@
 
 <div class="mainbody container w-50 py-5 my-3">
   <%@articles.each do |article|%>
+    <div class="card">
     <h1><%= article.title%> </h1>
     <p> <%= article.content%> </p>
+    <p> <%= link_to "🎯 Delete", 
+        delete_path(article),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></p>
+    </div>
   <%end%>
 </div>
