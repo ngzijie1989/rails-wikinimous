@@ -1,0 +1,23 @@
+<div class="navbar py-3 px-4 bg-dark text-light">
+<p> <%= link_to "Wikinomous", articles_path %></p>
+<p> <%= link_to "New Article", new_article_path %></p>
+</div>
+
+<div class="mainbody container w-50 py-5 my-3">
+  <h2>New Article</h2>
+  <div class="d-flex flex-column">
+    <%= form_with model: @article do |f| %>
+    <div class="d-flex align-items-center mt-5">
+      <%= f.label :Title, class:"label" %>
+      <%= f.text_field :title, class:"textarea" %>
+    </div>
+    <div class="d-flex align-items-center my-5">
+      <%= f.label :content, class:"label" %>
+      <%= f.text_area :content, class:"textarea"  %>
+    </div>
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
+  <div>
+</div>
